@@ -1,22 +1,18 @@
 import React from "react";
+import styled from "styled-components";
+import Header from "./components/Header";
 
-const fetchAnalyze = async (text: string) => {
-  const response = await fetch("http://203.230.103.35:3000", {
-    method: "POST",
-    body: JSON.stringify({
-      text,
-    }),
-  });
-  if (response.ok) {
-    const jsonRes = await response.json();
-    console.log(jsonRes);
-  } else {
-    console.log(response.statusText);
-  }
-};
+const Container = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+`;
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <Container>
+      <Header />
+    </Container>
+  );
 }
 
 export default App;
