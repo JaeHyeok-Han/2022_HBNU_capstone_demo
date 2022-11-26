@@ -41,3 +41,4 @@ const fetchAnalyze = async (text: string): Promise<SuccessDTO | ErrorDTO> => {
 };
 
 export { fetchAnalyze };
+export type { SuccessDTO };

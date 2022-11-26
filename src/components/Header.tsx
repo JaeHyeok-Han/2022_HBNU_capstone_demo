@@ -5,10 +5,10 @@ const Container = styled.header`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 60px;
 
   & img {
-    height: 80%;
+    height: 100%;
   }
 `;
 
