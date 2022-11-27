@@ -31,7 +31,7 @@ const Content = styled.div`
     }
   }
   & button {
-    width: 10%;
+    width: 11%;
     height: 100%;
     font-size: 1rem;
     background: #2157bf;
@@ -50,10 +50,12 @@ function InputBox() {
   async function analyze() {
     const response = await fetchAnalyze(text);
     if (!("error" in response)) {
+      console.log(response);
       addResult(response);
     } else {
       console.log(response);
     }
+    setText("");
   }
   return (
     <Container>

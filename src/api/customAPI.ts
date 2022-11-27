@@ -1,5 +1,5 @@
 interface Emotion {
-  class: string;
+  category: string;
   type: string;
   start: number;
   end: number;
@@ -7,7 +7,7 @@ interface Emotion {
 
 interface SuccessDTO {
   text: string;
-  isFiltering: boolean;
+  isFiltering: string;
   emotion: Emotion[] | null;
 }
 
@@ -41,4 +41,4 @@ const fetchAnalyze = async (text: string): Promise<SuccessDTO | ErrorDTO> => {
 };
 
 export { fetchAnalyze };
-export type { SuccessDTO };
+export type { SuccessDTO, Emotion };

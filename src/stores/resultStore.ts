@@ -10,7 +10,7 @@ const useResultStore = create<ResultStore>((set) => ({
   result: [],
   addResult: (value: SuccessDTO) =>
     set((state) => ({
-      result: [...state.result, value],
+      result: [value, ...state.result],
     })),
 }));
 
