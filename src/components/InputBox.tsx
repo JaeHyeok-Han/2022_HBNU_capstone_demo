@@ -48,6 +48,8 @@ function InputBox() {
     setText(e.target.value);
   }
   async function analyze() {
+    console.log("dd");
+
     const response = await fetchAnalyze(text);
     if (!("error" in response)) {
       console.log(response);
